@@ -1,0 +1,20 @@
+<div class="contain-body">
+  <div class="contain">
+    <span class="title">Weather Forecast</span>
+    <%= form_for @form, url: search_path, method: :get do |f| %>
+      <%= f.text_field :search_word, id: :keyword, class: 't-input', autocomplete: 'off'%>
+      <svg class="mySvg">
+        <path class="magnifier" d="M254 154 A 14 14 90 1 1 254.1 153.9 L 270 170"
+          stroke="#fff" stroke-width="3" stroke-linejoin="round" fill="none">
+        </path>
+        <path class="input-line" d="M270 170 L10 170 L10 132 L270 132 L270 170"
+          stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        </path>
+      </svg>
+    <% end %>
+  </div>
+  <div class="padding-space"></div>
+  <div class="reslut-boy">
+    <%= render partial: 'search_reslut' %>
+  </div>
+</div>
